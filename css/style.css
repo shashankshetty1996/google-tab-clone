@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: arial, sans-serif;
+}
+
+.container {
+  /* width: 768px; */
+  width: 665px;
+  margin: auto;
+}
+
+/* Navigation Bar */
+nav {
+  /* position: relative; */
+}
+
+nav ul.navbar {
+  position: absolute;
+  right: 15px;
+  top: 0px;
+  display: flex;
+  list-style: none;
+}
+
+nav ul.navbar li {
+  line-height: 50px;
+  margin: auto;
+  padding: 0px 8px;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+nav ul.navbar li:nth-child(1):hover a,
+nav ul.navbar li:nth-child(2):hover a {
+  /* box-shadow: 1px 1px 1px red; */
+  /* color: #cccccc; */
+  color: rgba(27, 25, 25, 0.6);
+}
+
+nav ul.navbar li:nth-child(n + 3) {
+  padding: 0px 15px;
+  margin-top: 15px;
+}
+
+nav ul.navbar li a {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+}
+
+main.container {
+  /* margin-top: 180px; */
+}
+
+.container #brand-logo {
+  display: block;
+  margin: 3em auto;
+}
+
+.container #search {
+  position: relative;
+}
+
+.container #search input {
+  display: block;
+  width: 100%;
+  padding: 1em;
+  font-size: 1em;
+  box-sizing: border-box;
+  font-weight: 100;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  box-shadow: 1px 1px 1px #dfdfdf;
+}
+
+.container #search input:hover {
+  box-shadow: 1px 3px 3px #dfdfdf;
+}
+
+.container #search a {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.container #search a:hover::before,
+.container #search a:hover::after {
+  visibility: visible;
+}
+
+.container #search a::before {
+  content: "";
+  position: absolute;
+  right: 2%;
+  top: 135%;
+  background-color: rgba(39, 39, 39);
+  width: 20px;
+  height: 10px;
+  transform: rotate(45deg);
+  z-index: -1;
+  visibility: hidden;
+  transition: visibility 0.2s ease-in-out;
+}
+
+.container #search a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: -150%;
+  top: 135%;
+  height: 30px;
+  width: 150px;
+  line-height: 30px;
+  text-align: center;
+  color: #dfdfdf;
+  background-color: rgba(39, 39, 39);
+  font-size: 12px;
+  visibility: hidden;
+  transition: visibility 0.2s ease-in-out;
+}
+
+.container #tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 155px);
+  grid-column-gap: 15px;
+  grid-row-gap: 10px;
+  width: 100%;
+  margin: 60px auto;
+}
+
+.container #tabs .tab-box {
+  background-color: #ececec;
+  height: 135px;
+  cursor: pointer;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 1px #dfdfdf, 1px 2px 5px #dfdfdf;
+}
+
+.container .tab-box img:hover {
+  box-shadow: 1px 3px 3px #dfdfdf, 2px 4px 5px #dfdfdf;
+}
+
+.container #tabs .tab-box img {
+  width: 100%;
+  height: 100%;
+}
